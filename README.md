@@ -2,6 +2,7 @@
 Low Budget, Dependency Injection Container. Suitable for all ages!<br />
 Container69 for PHP is a really, really simple Dependency Injection Container / Inversion of Control Container <a href="http://code.tutsplus.com/tutorials/dependency-injection-huh--net-26903">(what is this?)</a>
 <br /><br />
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jamesk322/Container69/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jamesk322/Container69/?branch=master)<br /><br />
 
 ###How to work this magic
 Include the file Cotainer69.php in your PHP script and initialize it
