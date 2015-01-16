@@ -37,5 +37,39 @@ $my_car = $container->get("Car");
 echo $my_car->make_car();
 ```
 You should be able to see here that all we are doing is getting an object of the class "Car" from the container, if we wanted to use alternate constructor or post constructor methods then we can overwrite the ones used in the "register" method by specifying them here.
+###The Car Class
+```php
+class Car {
+	
+	protected $make;
+	protected $model;
+	protected $colour;
+	
+	function __construct($make, $model) {
+		
+		$this->make = $make;
+		$this->model = $model;
+		
+	}
+	
+	public function set_colour($colour) {
+		
+		$this->colour = $colour;
+		
+	}
+	
+	public function make_car() {
+		
+		return "
+		Vehical Make: " . $this->make . "<br />
+		Model: " . $this->model . "<br />
+		With colour: " . $this->colour . "<br />
+		Has been made!";
+		
+	}
+	
+}
+```
 ###That's it
+The full example is included in this repo.<br />
 evaheb ,edoc fo senil 96 sniatnoc 96 reniatnoc
