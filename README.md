@@ -26,3 +26,16 @@ $container->register("Car", array("Fiat", "Punto"), function($obj) {
 });
 ```
 Here we have a class called "Car" and the constructor for this class asks for two arguments, make and model. You can see this in action in the example above, the lambda function then calls a method called set_colour in the class "Car".
+<br /><br />
+Now that we have registered the class we can get an object of this class from the container,
+```php
+$container->get($class, $constructor_args, $dependency_function);
+```
+The arguments here are the same as the ones for the "register" method, $constructor_args and $dependency_function are optional, if you do not specify these (which most of the time you probably wont) then then the ones used in the "register" method will be used. Back to the car example,
+```php
+$my_car = $container->get("Car");
+echo $my_car->make_car();
+```
+You should be able to see here that all we are doing is getting an object of the class "Car" from the container, if we wanted to use alternate constructor or post constructor methods then we can overwrite the ones used in the "register" method by specifying them here.
+###That's it
+evaheb ,edoc fo senil 96 sniatnoc 96 reniatnoc
